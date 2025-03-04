@@ -3,22 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let isTablet = /iPad|Android(?!.*Mobile)|Tablet|PlayBook|Silk/i.test(navigator.userAgent);
-            
-            if (!isTablet) {
-                // PC에서만 meta 태그 추가
-                let metaTag = document.createElement("meta");
-                metaTag.name = "viewport";
-                metaTag.content = "width=device-width, initial-scale=1.0";
-                document.head.appendChild(metaTag);
-            } else {
-                // 태블릿에서는 html 태그를 변경
-                document.documentElement.setAttribute("data-device", "tablet");
-            }
-        });
-    </script>
     <!-- <meta name="viewport" content="width=1280, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> -->
     <title>국민은행 상시감사시스템</title>
     <link rel="stylesheet" href="./plugins/jstree/3.3.17/themes/default/style.min.css">
@@ -637,6 +621,16 @@
     <script src="./js/menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            let isMobileOrTablet = /Mobi|Android|iPad|iPhone/i.test(navigator.userAgent);
+
+            if (!isMobileOrTablet) {
+                // PC에서만 meta 태그 추가
+                let metaTag = document.createElement("meta");
+                metaTag.name = "viewport";
+                metaTag.content = "width=device-width, initial-scale=1.0";
+                document.head.appendChild(metaTag);
+            }
+
             // 버튼 active 토글, 리셋 
             function toggleActive(selector, branchInfoSelector) {
                 document.querySelectorAll(selector).forEach(element => {
