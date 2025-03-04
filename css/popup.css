@@ -7,7 +7,7 @@
 	- 최초 작성일 :2025.02.10
 	- 최초 작성자 :김선영
 
-	- 최종 수정일 :2025.02.25
+	- 최종 수정일 :2025.02.27
 	- 최종 수정일 :김선영
 ******************************************************/
 
@@ -78,5 +78,31 @@
 #popup[data-popup=배치작업등록] {width: 650px; height: 580px;}
 
 /* 전체메뉴 보기 */
-.sitemap span {display: inline-block;}
-.sitemap >ul >li >span {background-color: #000;}
+.sitemap {font-family: 'paperlogy'; background-color: #e1e4e6; padding: .8rem !important; display: flex; gap:var(--figure-normal); flex-wrap: wrap;}
+.sitemap span {display: block; }
+/* .sitemap >ul {display: flex; column-gap: 1rem; flex-wrap: wrap; row-gap: 1rem;} */
+/* .sitemap li {margin: .4rem 0;} */
+
+.sitemap .depth-1 >li {background-color: var(--white-color); padding: 0; min-width: 199px;}
+.sitemap .depth-1 >li >div {padding: 0 .8rem .1rem;}
+.sitemap .depth-1 >li >span {background-color: #a58b75; color: var(--white-color); font-size: 1.6rem; line-height: 2.4rem; padding: .3rem 1rem; font-weight: 700;}
+
+.sitemap .depth-2 {font-weight: 700;}
+
+.sitemap .depth-2 >li >span {color: #3b3027; font-size: 1.4rem; padding: .4rem .2rem .4rem;}
+.sitemap .depth-2 >li >span::before {content: ''; width: .3rem; height: .3rem; border-radius: 50%; background-color: #3b3027; display: inline-block; vertical-align: middle; margin-right: .3rem;}
+
+.sitemap .depth-3 {margin-bottom: .8rem;}
+.sitemap .depth-3 >li >span {background-color:#b1aba6; color: var(--white-color); border-radius: var(--figure-small); padding: .4rem .8rem .2rem; font-size: 1.3rem;}
+.sitemap .depth-3 >li >span:has(+ .depth-4) {border-radius: var(--figure-small) var(--figure-small) 0 0}
+.sitemap .depth-3 >li:not(:first-of-type) {margin-top: .3rem;}
+
+.sitemap .depth-4 {background-color: #f2f4f5; padding: .4rem 1rem .4rem 1rem; margin-bottom: .2rem; border-radius: .0 .6rem .2rem .5rem;}
+.sitemap .depth-4 li {text-align: left;}
+.sitemap .depth-4 >li >span {font-size: 1.2rem; padding: .3rem 0; font-weight: normal; color: var(--gray-level-08);}
+.sitemap .depth-4 >li >span:before {content: ''; display: inline-block; vertical-align: middle; width: var(--figure-normal); height: var(--figure-normal);  background: url(../img/common/ico/ico_triangle.png) 0 0 no-repeat;
+}
+
+.sitemap .depth-5 {background-color: #fff; border: 1px solid #efeeee; border-radius: var(--figure-small); padding: .4rem .6rem;}
+.sitemap .depth-5 >li >span {font-size: 1.1rem; color: var(--gray-level-06); padding: var(--figure-xsmall) 0; font-weight: normal;}
+.sitemap .depth-5 >li >span:before {content: '· ';}
