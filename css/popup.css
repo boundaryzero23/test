@@ -1,0 +1,82 @@
+@charset "utf-8";
+/****************************************************
+	popup.css
+-----------------------------------------------------
+	- 팝업 스타일 정의
+-----------------------------------------------------
+	- 최초 작성일 :2025.02.10
+	- 최초 작성자 :김선영
+
+	- 최종 수정일 :2025.02.25
+	- 최종 수정일 :김선영
+******************************************************/
+
+#popup {width: 1280px; height: 940px; font-size: 1.3rem;}
+#popup.common {height: 1038px;}
+#popup #container {padding: .8rem 1.6rem 1.6rem;}
+
+/* 타이틀 영역 - 디자인 참고용 */
+#popup .tit-area {background-color: #323232; color: var(--white-color); line-height: 4rem; display: flex; align-items: center; justify-content: space-between;}
+#popup .tit-area h1 {font-family: 'KBFGTextM'; font-size: 1.7rem; font-weight: normal; padding-left: 1rem;}
+#popup .window-btn-group {display: flex; column-gap: var(--figure-normal); margin-right: 1rem;}
+#popup .window-btn-group button {width: 2.4rem; height: 2.4rem; text-indent: -9999px; }
+#popup .window-btn-group button:first-child {background: url('../img/common/temp/ico_window_minimize.png') 50% 50% no-repeat;}
+#popup .window-btn-group button:nth-child(2) {background: url('../img/common/temp/ico_window_maximize.png') 50% 50% no-repeat;}
+#popup .window-btn-group button:nth-child(3) {background: url('../img/common/temp/ico_window_close.png') 50% 50% no-repeat;}
+
+/*******************************
+	GDB
+*******************************/
+.gdb-box {position: relative; background-color: #f3f5f6; height: calc(100% - 60px); border-radius: var(--figure-normal); padding: var(--figure-large); padding-right: 43rem;}
+.gdb-box .modal {position: absolute; right: var(--figure-large); top: var(--figure-large); border-radius: var(--figure-normal); overflow: hidden; height: calc(100% - 4rem);}
+.gdb-box .modal h2 {background-color: #767a81; color: var(--white-color); font-family: 'paperlogy'; font-size: 1.6rem; font-weight: 700; padding: .8rem; height: 3.6rem;}
+.gdb-box .modal .cont-area {height: calc(100% - 4rem);}
+
+.gdb-box .node-area {text-align: center; width: 100%; position: relative;}
+.gdb-box .node-area span {display: inline-block;}
+.gdb-box .node-area .main-node, 
+.gdb-box .node-area .sub-node {width: 20rem; position: absolute;}
+.gdb-box .node-area .main-node .img {width: 12.7rem; height: 12.7rem; background: url('../img/common/gdb/main_node.png') 50% 50% no-repeat; margin: 0 auto;}
+.gdb-box .node-area .main-node:hover .img {background-image: url('../img/common/gdb/main_node_on.png');}
+.gdb-box .node-area .main-node i {background-color: var(--white-color); border: var(--figure-xsmall) solid var(--cnt-point-orange-color); min-width: 6rem; height: 2.4rem; display: inline-block; padding: 0 .8rem; border-radius: 1.2rem; position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-family: 'KBFGTextB'; font-size: 1.5rem; line-height: 1.4;}
+
+.gdb-box .node-area .sub-node .img {width: 8.1rem; height: 8.1rem; background: url('../img/common/gdb/sub_node.png') 50% 50% no-repeat; margin: 0 auto;}
+.gdb-box .node-area .sub-node:hover .img {background-image: url('../img/common/gdb/sub_node_on.png');}
+.gdb-box .node-area .sub-node i {background-color: #545045; color: var(--white-color); border:1px solid #3d3829; border-radius: var(--figure-small); min-width: 3rem; height: 1.8rem; display: inline-block; padding: 0 .4rem;  position: absolute; bottom: 1.1rem; left: 50%; transform: translateX(-50%); font-family: 'KBFGTextB'; font-size: 1.2rem; line-height: 1.4; }
+.gdb-box .node-area .sub-node:hover i {background-color: #22947d; border-color: #1d8a74;}
+.gdb-box .node-area .atm-node,
+.gdb-box .node-area .device-node {width: 4.7rem; height: 4.7rem;}
+.gdb-box .node-area .atm-node {background: url('../img/common/gdb/atm_node.png') 50% 50% no-repeat;}
+.gdb-box .node-area .device-node {background: url('../img/common/gdb/device_node.png') 50% 50% no-repeat;}
+
+/* modal */
+.gdb-box .modal {width: 400px; -webkit-box-shadow: -8px 8px 5px 0px rgba(0,0,0,0.11); -moz-box-shadow: -6px 6px 5px 0px rgba(0,0,0,0.11); box-shadow: -6px 6px 5px 0px rgba(0,0,0,0.11); background-color: var(--white-color); border: 1px solid var(--gray-level-03);}
+.gdb-box .modal .btn-close {right: 1rem; top: 1rem; opacity: .5; background-image: url(../img/common/ico/ico_close_w.png);}
+.gdb-box .modal .btn-close:hover {opacity: 1; transition: var(--trs-time);}
+.gdb-box .modal .cont-area {padding: var(--figure-normal);}
+.gdb-box .modal .cont-area dl {display: flex; align-items: center; border: 1px solid var(--gray-level-03); border-radius: var(--figure-small); margin-bottom: var(--figure-small);}
+.gdb-box .modal .cont-area dt, 
+.gdb-box .modal .cont-area dd {padding: .6rem .6rem .5rem;}
+.gdb-box .modal .cont-area dt {width: 6rem; background-color: #ebf1f8; text-align: center; border-right: 1px solid var(--gray-level-03); font-family: 'KBFGTextB'; font-size: 1.4rem;}
+.gdb-box .modal .cont-area dd {width: calc(100% - 6rem); font-family: 'KBFGTextM';}
+.gdb-box .modal .cont-area dd span {color: var(--gray-level-08);}
+
+/*******************************
+	팝업 콘텐츠
+*******************************/
+/* 실시간 상세내역 */
+.view-top-area {display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: var(--figure-normal);}
+.view-top-area >.tit {font-family: 'paperlogy';}
+.view-top-area >.tit >span {font-size: 1.2rem;}
+.view-top-area >.tit >h2 {font-size: 1.9rem;}
+
+/* 권한 설정 */
+#popup[data-popup=권한설정] {width: 1000px; height: 810px;}
+#popup[data-popup=권한설정] .common-tab > ul + .btn-area {position: absolute; left: 20rem; top: .2rem;}
+
+/* 배치작업등록 */
+#popup[data-popup=배치작업등록] {width: 650px; height: 580px;}
+
+/* 전체메뉴 보기 */
+.sitemap span {display: inline-block;}
+.sitemap >ul >li >span {background-color: #000;}

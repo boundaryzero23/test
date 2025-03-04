@@ -1,0 +1,64 @@
+@charset "utf-8";
+/****************************************************
+	tree.css
+-----------------------------------------------------
+	- 트리 스타일 정의
+-----------------------------------------------------
+	- 최초 작성일 :2025.02.19
+	- 최초 작성자 :김선영
+
+	- 최종 수정일 :2025.02.21
+	- 최종 수정일 :김선영
+******************************************************/
+
+/*******************************
+	마이메뉴
+*******************************/
+.tree-wrap.ty-1 {border-radius: .6rem; padding: 1rem; border: 1px solid var(--gray-level-02); font-size: 1.3rem; font-family: 'KBFGTextM'; color: var(--gray-level-09); max-height: 48rem; overflow-y: auto;}
+
+/* 트리 컨트롤 버튼 */
+.ctrl-tree.ty-1 button {width: 2.1rem; height: 2.1rem; text-indent: -9999px; border-radius: var(--figure-small); border: 1px solid var(--gray-level-06); transition: var(--trs-time);}
+.ctrl-tree.ty-1 button:first-child {background: url('../img/jstree/ico_refresh.png') 45% 50% no-repeat;}
+.ctrl-tree.ty-1 button:nth-child(2) {background: url('../img/jstree/ico_add_folder.png') 45% 50% no-repeat;}
+.ctrl-tree.ty-1 button:nth-child(3) {background: url('../img/jstree/ico_trash.png') 55% 50% no-repeat;}
+.ctrl-tree.ty-1 button:nth-child(4) {background: url('../img/jstree/ico_up.png') 55% 50% no-repeat;}
+.ctrl-tree.ty-1 button:nth-child(5) {background: url('../img/jstree/ico_down.png') 55% 50% no-repeat;}
+.ctrl-tree.ty-1 button:hover {background-color: #f2f5fa; border: 1px solid var(--gray-level-08);}
+
+/* js트리 스타일 */
+.jstree-default .jstree-anchor:hover,
+.jstree-default .jstree-clicked {box-shadow: none;}
+.jstree-default .jstree-hovered {background: #f5f5f5;}
+.jstree-default .jstree-clicked {background-color: #fff3b3;}
+.jstree-default .jstree-node, .jstree-default .jstree-icon {background: url(../img/jstree/32px.png)}
+.jstree-default .jstree-folder {background: url(../img/jstree/32px.png) -256px -5px no-repeat}
+.jstree-default .jstree-file {background: url(../img/jstree/32px.png) -95px -70px no-repeat}
+.jstree .jstree-open>.jstree-children {margin: .4rem 0 .8rem;}
+/* .jstree-children >li {margin-top: .4rem;} */
+.jstree-container-ul > li > .jstree-children:last-of-type {margin-bottom: 0;}
+
+/*******************************
+	실시간 점검
+*******************************/
+div[id*=grid] * {font-family: 'KBFGTextL'; font-size: 1.2rem; letter-spacing: -.1pt;}
+
+/* 트리 */
+#treeBox .tui-grid-header-area {height: 28px !important; display: none;} /* name 영역 숨김 */
+#treeBox .tui-grid-header-cell {height: 28px !important; line-height: 28px !important;}
+#treeBox .tui-grid-table tr {height: 28px !important;}
+#treeBox .tui-grid-cell-header {background-color: #d4d6d8 !important; border-top: 1px solid #c0c2c5; border-bottom: 1px solid #c0c2c5; font-family: 'paperlogy';}
+
+#treeBox .tui-grid-cell {background-color: var(--white-color);}
+
+/* 트리 >> 아이콘 숨김 */
+#treeBox .tui-grid-tree-icon {display: none !important;}
+#treeBox .tui-grid-cell-has-tree .tui-grid-cell-content {padding-left: 0;}
+#treeBox .tui-grid-tree-button-expand .tui-grid-tree-icon i {display: none;}
+#treeBox .tui-grid-cell-content {margin-left: -2rem;}
+
+/* 트리 >> 아이콘 변경 */
+#treeBox .tui-grid-tree-button-collapse .tui-grid-btn-tree i {width: 11px; height: 11px; background: url('../img/common/btn_plus.png') 50% 50% no-repeat; margin-top: 2px;}
+#treeBox .tui-grid-tree-button-expand .tui-grid-btn-tree i {width: 11px; height: 11px; background: url('../img/common/btn_minus.png') 50% 50% no-repeat; margin-top: 2px;}
+
+/* 트리 >> 아이콘 옆 여백 줄이기 */
+#treeBox .tui-grid-tree-extra-content {margin-left: 0;}

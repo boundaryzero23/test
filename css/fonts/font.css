@@ -1,0 +1,88 @@
+/****************************************************
+	Font.css
+-----------------------------------------------------
+	- 폰트 스타일
+-----------------------------------------------------
+	- 최초 작성일 :2022.09.14
+	- 최초 작성자 :김선영
+
+	- 최종 수정일 :2022.09.14
+	- 최종 수정일 :김선영
+******************************************************/
+
+@font-face { /*KB금융 본문체 Light*/
+    font-family:"KBFGTextL";
+    font-style:normal;
+    font-weight:normal;
+    src:url("KBFGTextL.eot");
+    src:local('※'), url('KBFGTextL.eot?#iefix') format("embedded-opentype"), url("KBFGTextL.woff") format("woff")
+}
+
+@font-face { /*KB금융 본문체 Medium*/
+    font-family:"KBFGTextM";
+    font-style:normal;
+    font-weight:normal;
+    src:url("KBFGTextM.eot");
+    src:local('※'), url('KBFGTextM.eot?#iefix') format("embedded-opentype"), url("KBFGTextM.woff") format("woff")
+}
+
+@font-face { /*KB금융 본문체 Bold*/
+  font-family:"KBFGTextB";
+  font-style:normal;
+  font-weight:normal;
+  src:url("KBFGTextB.eot");
+  src:local('※'), url('KBFGTextB.eot?#iefix') format("embedded-opentype"), url("KBFGTextB.woff") format("woff")
+}
+
+@font-face { /*KB금융 제목체 Medium*/
+    font-family:"KBFGDisplayM";
+    font-style:normal;
+    font-weight:normal;
+    src:url("KBFGDisplayM.eot");
+    src:local('※'), url('KBFGDisplayM.eot?#iefix') format("embedded-opentype"), url("KBFGDisplayM.woff") format("woff")
+}
+
+@font-face {
+    font-family: "paperlogy";
+    src:
+      url("./Paperlogy/Paperlogy-1Thin.woff2") format("woff2"),
+      url("./Paperlogy/Paperlogy-1Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "paperlogy";
+    src:
+      url("./Paperlogy/Paperlogy-5Medium.woff2") format("woff2"),
+      url("./Paperlogy/Paperlogy-5Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "paperlogy";
+    src:
+      url("./Paperlogy/Paperlogy-6SemiBold.woff2") format("woff2"),
+      url("./Paperlogy/Paperlogy-6SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "paperlogy";
+    src:
+      url("./Paperlogy/Paperlogy-7Bold.woff2") format("woff2"),
+      url("./Paperlogy/Paperlogy-7Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "paperlogy";
+    src:
+      url("./Paperlogy/Paperlogy-9Black.woff2") format("woff2"),
+      url("./Paperlogy/Paperlogy-9Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+  }

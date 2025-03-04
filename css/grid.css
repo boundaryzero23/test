@@ -1,0 +1,40 @@
+@charset "utf-8";
+/****************************************************
+	grid.css
+-----------------------------------------------------
+	- 그리드 스타일 정의
+-----------------------------------------------------
+	- 최초 작성일 :2025.02.21
+	- 최초 작성자 :김선영
+
+	- 최종 수정일 :2025.02.26
+	- 최종 수정일 :김선영
+******************************************************/
+/* 그리드 상단과 하단 선 색상 변경 */
+div[id^=grid] .tui-grid-border-line-top {border-color: #888 !important;}
+div[id^=grid] .tui-grid-border-line-bottom {border-color: #eee !important;}
+/* 그리드 헤더 */
+div[id^=grid] .tui-grid-cell-header, 
+div[id^=grid] .tui-grid-header-area {background-color: #f4f4f4 !important;}
+div[id^=grid] .tui-grid-cell-header {border-color: #dfdfdf !important;}
+/* 그리드 바디 */
+.tui-grid-cell {background-color: #fff !important; border-color: #eee !important;}
+/* 그리드 헤더 선택 시 column 색상 */
+div[id^=grid] .tui-grid-layer-selection {background-color:#ffeb3b !important; opacity: .2;}
+
+/* 그리드 합계 영역 */
+div[id^=grid] .tui-grid-summary-area { border-color: #ccc; }
+div[id^=grid] .tui-grid-cell-summary {color: #000; background-color: #e7e7e7 !important; font-weight: 600;}
+div[id^=grid] .summary-double-line  {padding: .8rem; text-align: center;}
+div[id^=grid] .summary-double-line > * {margin-left: .2rem;}
+
+/* 그리드 셀 컬러 */
+.color-subtotal {background-color: #f7f7f7}  /* 소계 컬러 */
+.color-01 {background-color: #feb9c5;}  /* 고위험 상시점검 항목 발생 컬러 */
+.color-02 {background-color: #aaebdd;}  /* 점검 후 보류 등록 됐을 경우 */
+.color-03 {background-color: #b9d0f7;}  /* 고객이 당행직원일 경우 */
+.color-04 {background-color: #effbcd;} /* 그리드 구분 색상 */
+.color-05 {background-color:#ccecfd;} /* 셀 강조 컬러 */
+
+.em-01 {font-weight: 600; font-style: italic !important;} /* 메모가 등록된 고객일 경우 */
+.em-02 {font-weight: 600; color:#ff5542 !important} /* 정정, 취소정정 거래일 경우 */
