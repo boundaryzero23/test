@@ -3,13 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=1280, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> -->
+    <meta name="viewport" content="width=1280, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>국민은행 상시감사시스템</title>
     <link rel="stylesheet" href="./plugins/jstree/3.3.17/themes/default/style.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/layout.css">
     <script src="./plugins/jqeury/3.6.0/jquery.min.js"></script>
     <script src="./plugins/jstree/3.3.17/jstree.min.js"></script>
+    <style>
+        .pc-mode {
+    width: 1280px; /* 태블릿에서도 PC 화면처럼 보이도록 고정 */
+    margin: 0 auto;
+    overflow-x: auto; /* 가로 스크롤 허용 */
+}
+    </style>
 </head>
 
 <body>
@@ -620,6 +627,22 @@
 
     <script src="./js/menu.js"></script>
     <script>
+
+function forcePCModeOnTablet() {
+    let screenWidth = window.innerWidth;
+    let isTablet = screenWidth >= 768 && screenWidth <= 1280;
+    
+    if (isTablet) {
+        document.body.classList.add("pc-mode"); // 태블릿에서도 PC 스타일 유지
+    } else {
+        document.body.classList.remove("pc-mode");
+    }
+}
+
+// 화면 크기 변경 시 실행
+window.addEventListener("resize", forcePCModeOnTablet);
+window.addEventListener("load", forcePCModeOnTablet);
+
         document.addEventListener('DOMContentLoaded', function () {
             // 버튼 active 토글, 리셋 
             function toggleActive(selector, branchInfoSelector) {
